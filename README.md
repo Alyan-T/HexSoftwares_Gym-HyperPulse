@@ -18,7 +18,7 @@ A sleek, responsive, and modern single-page website designed for a gym/fitness c
 
 ## Project Structure
 
-├── index.html     # Main HTML document
-├── style.css      # Styling rules and responsive media queries
-├── script.js      # Interactive elements (Navbar & Mobile Menu)
-└── README.md      # Project documentation
+--> index.html 
+--> style.css 
+--> script.js
+--> README.md 

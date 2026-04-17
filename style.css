@@ -1,0 +1,95 @@
+:root {
+    --primary: #ff3e3e;
+    --dark: #121212;
+    --gray: #1e1e1e;
+    --text-light: #f4f4f4;
+    --white: #ffffff;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: 'Roboto', sans-serif; line-height: 1.6; color: #333; overflow-x: hidden; scroll-behavior: smooth; }
+
+/* Global Sections */
+.container { padding: 80px 10%; }
+.bg-dark { background-color: var(--dark); color: var(--text-light); }
+.section-title { text-align: center; margin-bottom: 50px; font-size: 2.5rem; font-family: 'Oswald'; text-transform: uppercase; }
+.section-title::after { content: ''; display: block; width: 60px; height: 4px; background: var(--primary); margin: 10px auto; }
+
+/* Navigation */
+.navbar {
+    display: flex; justify-content: space-between; align-items: center;
+    padding: 20px 10%; position: fixed; width: 100%; top: 0; z-index: 1000;
+    transition: 0.4s; background: rgba(0,0,0,0.8);
+}
+.logo { font-family: 'Oswald'; font-size: 1.8rem; color: var(--white); font-weight: 700; }
+.logo span { color: var(--primary); }
+.nav-links { display: flex; list-style: none; }
+.nav-links a { color: var(--white); text-decoration: none; margin-left: 30px; font-weight: 500; transition: 0.3s; }
+.nav-links a:hover { color: var(--primary); }
+.burger { display: none; color: white; font-size: 1.5rem; cursor: pointer; }
+
+.hero {
+    height: 100vh;
+    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), 
+                url('gym-bg.jpeg') center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    padding: 0 20px;
+}
+
+.hero-content h1 { 
+    font-size: 4rem; 
+    margin-bottom: 1rem; 
+    font-family: 'Oswald', sans-serif;
+    text-transform: uppercase;
+}
+
+.hero-content h1 span {
+    color: var(--primary);
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+/* Cards & Icons */
+.grid-3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; }
+.card {
+    background: var(--white); padding: 40px; text-align: center;
+    border-radius: 12px; transition: 0.3s; box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+}
+.card:hover { transform: translateY(-10px); }
+.dark-card { background: var(--gray); border: 1px solid #333; color: var(--white); }
+.icon-box { font-size: 3rem; color: var(--dark); margin-bottom: 20px; }
+.icon-box.red { color: var(--primary); }
+
+/* Pricing */
+.price-card { background: white; padding: 40px; border-radius: 12px; position: relative; text-align: center; }
+.plan-header { font-family: 'Oswald'; font-size: 1.5rem; margin-bottom: 10px; }
+.price { font-size: 3rem; font-weight: 700; margin-bottom: 20px; }
+.price span { font-size: 1rem; color: #777; }
+.plan-features { list-style: none; margin-bottom: 30px; text-align: left; }
+.plan-features li { margin-bottom: 10px; }
+.plan-features i { color: var(--primary); margin-right: 10px; }
+.featured { background: var(--dark); color: white; transform: scale(1.05); border: 2px solid var(--primary); }
+
+/* Footer */
+.footer { background: #000; color: white; padding: 60px 0 20px; }
+.footer-content { 
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); 
+    width: 80%; margin: 0 auto; gap: 40px;
+}
+.footer-section h3, .footer-section h4 { margin-bottom: 20px; font-family: 'Oswald'; }
+.footer-section ul { list-style: none; }
+.footer-section ul li { margin-bottom: 10px; }
+.footer-section a { color: #bbb; text-decoration: none; }
+.footer-section a:hover { color: var(--primary); }
+.social-icons a { font-size: 1.5rem; margin-right: 15px; color: white; }
+.footer-bottom { text-align: center; border-top: 1px solid #222; margin-top: 40px; padding-top: 20px; font-size: 0.9rem; color: #777; }
+
+/* Buttons */
+.btn { background: var(--primary); color: white; padding: 12px 30px; border: none; text-decoration: none; font-weight: bold; cursor: pointer; display: inline-block; }
+.btn-outline { border: 2px solid var(--primary); color: var(--primary); padding: 10px 28px; background: transparent; font-weight: bold; cursor: pointer; }
